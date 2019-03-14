@@ -2,12 +2,18 @@
 // Find the second minimum element of an array
 const secondMin = arr => {
     let min = Math.min(...arr);
-    let newArr = arr.map(el => el !== min);
+    let newArr = [];
+
+    arr.forEach(el => {
+        if (el > min) {
+            newArr.push(el)
+        }
+    })
     
     return Math.min(...newArr);
 }
 
-console.log(secondMin([1,2,2,0,0]));
+console.log(secondMin([1,2,2,0,0, -1]));
 
 // First non-repeating integers in an array
 // Merge two sorted arrays
