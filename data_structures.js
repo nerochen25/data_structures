@@ -41,7 +41,24 @@ const firstNonRepeatNum = arr => {
     }
     return false;
 }
+// console.log(firstNonRepeatNum([2,3,4,4,2,3,1,1,0]));
 
-console.log(firstNonRepeatNum([2,3,4,4,2,3,1,1,0]));
 // Merge two sorted arrays
+//input: [1,2,4,6,9], [2,4,7,9,10]
+//output: [1,2,2,4,4,6,7,9,9,10]
+const mergeSortedArrays = (a, b) => {
+    let combineArr = a;
+
+    b.forEach(el => {
+        combineArr.push(el);
+    })
+
+    return combineArr.sort((i ,j) => {
+        return i - j
+    })
+}
+
+// console.log(mergeSortedArrays([1,2,4,6,9], [2,4,7,9,10]))
+
 // Rearrange positive and negative values in an array
+
