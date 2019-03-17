@@ -68,7 +68,7 @@ const mergeSortedArrays = (a, b) => {
 /////////////Stack///////////////
 class Stack {
     constructor(val) {
-        this.stack = [val];
+        this.stack = new Array(val);
     }
 
     push(newStack){
@@ -97,15 +97,22 @@ class Stack {
 }
 
 var stack = new Stack({
-    name: 'nero'
+    name: 'Nero'
 })
 
-stack.push('hello');
+stack.push({name: 'Nico'});
 
-console.log(stack);
+stack.push({name: 'Dante'});
 
-console.log(stack.pop());
+stack.push({name: 'Vergil'});
 
-console.log(stack);
+// console.log(stack);
 
-console.log(stack.isEmpty())
+// console.log(stack.pop());
+
+// console.log(stack);
+
+// console.log(stack.isEmpty())
+
+// console.log(stack.top())
+
