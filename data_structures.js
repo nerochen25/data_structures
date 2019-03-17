@@ -65,7 +65,7 @@ const mergeSortedArrays = (a, b) => {
 
 
 
-////////Stack///////////
+/////////////Stack///////////////
 
 class Stack {
     constructor(val) {
@@ -94,4 +94,4 @@ console.log(stack);
 
 console.log(stack.pop());
 
-console.log(stack)
+console.log(stack);
