@@ -75,6 +75,13 @@ class Stack {
     push(newStack){
         this.val.push(newStack)
     }
+
+    pop() {
+        let length = this.val.length;
+        let lastEl = this.val[length-1];
+        this.val = this.val.slice(0, length - 1)
+        return lastEl;
+    }
 }
 
 var stack = new Stack({
@@ -83,5 +90,8 @@ var stack = new Stack({
 
 stack.push('hello');
 
+console.log(stack);
+
+console.log(stack.pop());
 
 console.log(stack)
