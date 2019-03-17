@@ -116,3 +116,9 @@ stack.push({name: 'Vergil'});
 
 // console.log(stack.top())
 
+// Evaluate postfix expression using a stack
+
+// Sort values in a stack
+
+// Check balanced parentheses in an expression
+
