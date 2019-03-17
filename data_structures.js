@@ -66,21 +66,33 @@ const mergeSortedArrays = (a, b) => {
 
 
 /////////////Stack///////////////
-
 class Stack {
     constructor(val) {
-        this.val = [val];
+        this.stack = [val];
     }
 
     push(newStack){
-        this.val.push(newStack)
+        this.stack.push(newStack)
     }
 
     pop() {
-        let length = this.val.length;
-        let lastEl = this.val[length-1];
-        this.val = this.val.slice(0, length - 1)
+        let length = this.stack.length;
+        let lastEl = this.stack[length-1];
+        this.stack = this.stack.slice(0, length - 1)
         return lastEl;
+    }
+
+    isEmpty() {
+        if (this.stack.length === 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    
+    top() {
+        let length = this.stack.length
+        return this.stack[length-1]
     }
 }
 
@@ -95,3 +107,5 @@ console.log(stack);
 console.log(stack.pop());
 
 console.log(stack);
+
+console.log(stack.isEmpty())
