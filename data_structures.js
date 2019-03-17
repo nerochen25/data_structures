@@ -153,15 +153,15 @@ class Queue {
 var queue = new Queue({name: 'Nero'});
 
 queue.enqueue({name: "Dante"})
-console.log(queue);
+// console.log(queue);
 
-queue.dequeue();
+// queue.dequeue();
 
-console.log(queue);
+// console.log(queue);
 
-console.log(queue.isEmpty())
+// console.log(queue.isEmpty())
 
-queue.dequeue();
+// queue.dequeue();
 
-console.log(queue.isEmpty())
+// console.log(queue.isEmpty())
 
