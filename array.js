@@ -92,3 +92,16 @@ const missingNumber = (arr1, arr2) => {
 }
 
 // console.log(missingNumber([8,3,5,1], [1,5,3]))
+
+
+// my_min
+// Given a list of integers find the smallest number in the list.
+// Phase I
+// First, write a function that compares each element to every other element of the list. 
+// Return the element if all other elements in the array are larger.
+
+const my_min = (arr) => {
+    return Math.min(...arr)
+}
+
+console.log(my_min([1,2,4,6,-5]))
