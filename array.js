@@ -104,4 +104,31 @@ const my_min = (arr) => {
     return Math.min(...arr)
 }
 
-console.log(my_min([1,2,4,6,-5]))
+// console.log(my_min([ 0, 3, 5, 4, -5, 10, 1, 90 ]))
+
+const my_min2 = (arr) => {
+    let min = arr[0];
+
+    for (let i = 1; i < arr.length; i++) {
+        if (arr[i] < min) {
+            min = arr[i]
+        }
+    }
+
+    return min;
+}
+
+// console.log(my_min2([ 0, 3, 5, 4, -5, 10, 1, 90 ]))
+
+// Largest Contiguous Sub-sum
+// You have an array of integers and you want to find the largest contiguous (together in sequence) sub-sum. 
+// Find the sums of all contiguous sub-arrays and return the max.
+const sumHelper = (arr) => {
+    return arr.reduce(function(acc, num) {
+        return acc + num
+    })
+}
+
+const subSum = (arr) => {
+
+}
