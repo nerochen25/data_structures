@@ -63,3 +63,32 @@ const mergeSortedArrays = (a, b) => {
 // Rearrange positive and negative values in an array
 
 
+// find_missing_number
+// Assume an array of non-negative integers. 
+// A second array is formed by shuffling the elements of the first array and deleting a random element. 
+// Given these two arrays, find which element is missing in the second array. Do this in linear time with constant memory use.
+
+const missingNumber = (arr1, arr2) => {
+    let longerArr,
+        shorterArr;
+
+    if (arr1.length > arr2.length) {
+        longerArr = arr1;
+        shorterArr = arr2;
+    } else {
+        longerArr = arr2;
+        shorterArr = arr1;
+    }
+
+    for (let i = 0; i < shorterArr.length; i++) {
+
+       if (longerArr.includes(shorterArr[i])) {
+        let index = longerArr.indexOf(shorterArr[i]);
+        longerArr.splice(index, 1);
+        // console.log(longerArr)
+       }
+    }
+    return longerArr;
+}
+
+// console.log(missingNumber([8,3,5,1], [1,5,3]))
